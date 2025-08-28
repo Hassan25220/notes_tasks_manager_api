@@ -1,0 +1,112 @@
+### Register a new user
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "test"
+}
+
+###
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+  "username": "hassan",
+  "password": "test@123"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"hassan",
+    "email":"hassan@gmail.com",
+    "password":"test@123"
+}
+
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"ahmed",
+    "email":"ahmed@gmail.com",
+    "password":"test@123"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/tasks/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+{
+    "title": "Break-Fast",
+    "description": "Morning break-fast done",
+    "completed": true
+}
+
+###
+
+GET http://127.0.0.1:8000/api/tasks/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+###
+GET http://127.0.0.1:8000/api/tasks/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+###
+PUT http://127.0.0.1:8000/api/tasks/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+{
+    "title": "Workout Updated",
+    "description": "Leg Day",
+    "completed": true
+}
+###
+PATCH http://127.0.0.1:8000/api/tasks/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+{
+    "completed": false
+}
+
+###
+DELETE http://127.0.0.1:8000/api/tasks/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MjkyMjU5LCJpYXQiOjE3NTYyODg2NTksImp0aSI6IjRjZjkwMzJjM2I0NzQ4YmM4NjNmMTI1ZDQzMGI0ZDZhIiwidXNlcl9pZCI6IjIifQ.lZ9biRbbIOvy0ywc0nlwoEodf2g--CopZ88XdihH2C0
+
+###
+
+POST http://127.0.0.1:8000/api/notes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MzAzNTAwLCJpYXQiOjE3NTYyOTk5MDAsImp0aSI6IjE1YTIyNjNlZDgwNTQzZWI5ZjhhMzFkMDczZjUxNTM0IiwidXNlcl9pZCI6IjIifQ.DGZNVztzrbga7LUhdq5yN4hXu6i-_zaDUc8mlS4LorQ
+Content-Type: application/json
+
+{
+  "title": "My first AI-integrated note",
+  "content": "This note will be generated using GPT later."
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/notes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2MzAzNTAwLCJpYXQiOjE3NTYyOTk5MDAsImp0aSI6IjE1YTIyNjNlZDgwNTQzZWI5ZjhhMzFkMDczZjUxNTM0IiwidXNlcl9pZCI6IjIifQ.DGZNVztzrbga7LUhdq5yN4hXu6i-_zaDUc8mlS4LorQ
+
+
+### 
+
+# ------ OPENAI Note Suggestion -------
+
+POST http://127.0.0.1:8000/api/tasks/suggest-note/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2Mzc0NDAxLCJpYXQiOjE3NTYzNzA4MDEsImp0aSI6ImI1NDViZmRjZTVhMzQ4NmU5YWU3NjYzMWQyYjg0MmNkIiwidXNlcl9pZCI6IjIifQ.gknMdtM2oMByzDEpYUk8vteGRI9vv1DDSVt9PoaPo08
+Content-Type: application/json
+
+{
+  "title": "Fix login bug",
+  "description": "User is not redirected to dashboard after login."
+}
